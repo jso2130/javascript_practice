@@ -13,7 +13,6 @@
 평점: 90점
 */
 
-
 function printTotalAndAVG(clsName, scs) {
    
     console.log(`학급 이름: ${clsName}`);
