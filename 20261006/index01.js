@@ -1,40 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('READY!!');
-  
+document.addEventListener('DOMContentLoaded', function() {
+
     var inputEle = document.querySelector('#colorPicker');
     var inputEleValue = inputEle.value;
 
     var colorTextEle = document.querySelector('#colorText');
-    var colorTextContent = colorTextEle.textContent;
+    var colorTextValue = colorText.textContent;
 
-    colorTextEle.textContent = `컬러 코드 검색: ${inputEleValue}`;
+    colorText.textContent = `${colorTextValue}: ${inputEleValue}`;
 
-    /*방법 1.*/
-    inputEle.addEventListener('input', function(e){
+    document.addEventListener('input', function(e) {
+        
+        var colorPickerEle = document.querySelector('#colorPicker')
 
-        console.log(e.target);
+        if (e.target === colorPickerEle) {
+            var changedColorValue = e.target.value;
+            colorText.textContent = `${colorTextValue}: ${changedColorValue}`;
 
-        var changedColorValue = e.target.value;
-        colorTextEle.textContent = `컬러 코드 검색: ${changedColorValue}`;
-    
-        var bodyEle = document.querySelector('body');
-        bodyEle.style.backgroundColor = changedColorValue;
+            var bodyEle = document.querySelector('body');
+            bodyEle.style.backgroundColor = changedColorValue;
+        }
 
     })
 
 })
-
-/*방법 2. input 이벤트의 엘리먼트를 그룹화할 때*/
-// document.addEventListener('input', function(e){
-
-//     var colorPickerEle = document.querySelector('#colorPicker')
-
-//     if (e.target === colorPickerEle) {
-//         var changedColorValue = e.target.value;
-//         colorTextEle.textContent = `컬러 코드 검색: ${changedColorValue}`;
-    
-//         var bodyEle = document.querySelector('body');
-//         bodyEle.style.backgroundColor = changedColorValue;
-//     }
-
-// })
