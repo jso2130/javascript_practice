@@ -2,7 +2,6 @@
 // alert('추석');
 
 //변수 정의 (선언과 초기화)
-
 var myScore = 80;
 console.log(myScore);
 
@@ -22,9 +21,7 @@ myScore = true;
 console.log(myScore);
 
 
-
 //변수 선언 키워드(var,(let,const) -> ES6+)
-
 
 // let myName = "gildong";
 // console.log(myName);
@@ -36,7 +33,6 @@ console.log(myScore);
 // console.log(PI);
 
 
-
 //Q1. 변수 myName과 myMajor에 자신의 이름과 전공을 저장하고 출력해보자!
 
 var myName = "정승윤";
@@ -44,7 +40,6 @@ console.log("myName: ",myName);
 
 var myMajor = "식품영양";
 console.log("myMajor: ",myMajor);
-
 
 
 /*
@@ -62,7 +57,6 @@ intro = '안녕하세요.';
 console.log(intro);
 
 
-
 //변수명 규칙
 //1. 영문자를 사용한다.
 //2. 소문자로 시작한다(camelCase)
@@ -71,7 +65,6 @@ console.log(intro);
 //5. 예약어는 변수명으로 사용할 수 없다.
 //6. 언더바(_)를 제외한 특수문자는 사용할 수 없다.
 //7. 숫자는 첫 글자는 제외한 나머지 자리에서만 사용한다.
-
 
 
 //데이터 자료형
