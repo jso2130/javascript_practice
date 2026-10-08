@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="">
+        // 컨테이너 자료형 : 리스트, 튜플, 딕셔너리
+        //
+        //
+
+        //1. Array(배열)
+        //[전체 데이터 조회]
+
+        var users = [
+            {name: '길동', age: 20},
+            {name: '찬호', age: 30},
+            {name: '세리', age: 40}
+        ]
+
+        //for문
+        for (var i = 0; i < users.length; i++ ) {
+            var user = users[i];
+            console.log(`name: ${user.name}, age: ${user.age}`);
+        }
+
+        //forEach, arrow function
+        //파라미터가 하나일 때는 ()생략
+        users.forEach((user) => {
+            console.log(`name: ${user.name}, age: ${user.age}`);
+        });
+
+
+        
+        // 2. Map 
+        // : Object랑 거의 비슷
+        
+        // 선언 방법
+        var myInfo = new map();
+        
+        // 데이터 추가, 수정
+        myInfo.set('name','홍길동');
+        myInfo.set('age','20');
+
+        // 데이터 조회
+        console.log(myInfo.get('name'));
+        console.log(myInfo.get('age'));
+
+        // 데이터 삭제
+        myInfo.delete('age');
+
+
+        // 전체 데이터 조회
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
