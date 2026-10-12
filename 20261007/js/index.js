@@ -58,6 +58,18 @@ function addEvents() {
 
         console.log('listMenuBtn CLICKED');
 
+        let myDiaries = [...searchDiaries(getCurrentSignInedMemberID())].reverse();   // 전개 연산자로 깊은 복사해서 내림차순
+
+        let ulEle = document.querySelector('div.list_wrap > ul');
+        let liEles = '';
+
+        for (let i = 0; i < myDiaries.length; i++) {      // 동적 태그 : 리스트가 하나씩 추가됨
+            liEles += `<li>${myDiaries[i]}</li>`;
+        }
+        console.log(`liEles: ${liEles}`);
+        
+        ulEle.innerHTML = liEles;
+
         showSelectedView(VIEW_NO.DIARY_LIST_VIEW);
 
     });
@@ -131,6 +143,10 @@ function addEvents() {
 
         let diary = document.querySelector('div.write_wrap input').value;
         addDiary(diary);
+
+        alert('diary write SUCCESS');
+
+        document.querySelector('div.write_wrap input').value ='';      //입력 후 값 청소  
 
     });
 
